@@ -91,6 +91,7 @@ def quiz():
 
     print("\nYou scored %d out of %d." % (score, maxQuestions))
 
+#Store data into the class file
 def storeData():
     global name
     global classNo
@@ -174,8 +175,10 @@ def returnResults(classNo, sortType):
 
         #Reverses the list, sorted in decending order.
         userList.sort()
-        #print(scoreList)   #Debugging
-        #print(scoreDict)   #Debugging
+        '''
+        print(scoreList)   #Debugging
+        print(scoreDict)   #Debugging
+        '''
 
         #Print the students alphabetically with their high score
         print("Students alphabetically: ")
@@ -194,8 +197,10 @@ def returnResults(classNo, sortType):
             #Skip headers
             if new and row["Name"] != "Name":
                 userList.append(row["Name"])
-        #print(userList)    #Debugging56
-
+        '''
+        #print(userList)    #Debugging
+        '''
+        
         #Get each of the students' highest score out of the last 3
 
         scoreList = []
@@ -228,9 +233,11 @@ def returnResults(classNo, sortType):
 
         #Reverses the list, sorted in decending order.
         scoreList.sort(reverse=True)
-        #print(scoreList)   #Debugging
-        #print(scoreDict)   #Debugging
-
+        '''
+        print(scoreList)   #Debugging
+        print(scoreDict)   #Debugging
+        '''
+        
         #Print the student and their high score (passed 3), by high score
         print("Students by high score: ")
         for score in scoreList:
